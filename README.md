@@ -3,7 +3,7 @@
 Zenith has no backend yet!
 
 # Setup
-Python (if you want to use notebook)
+Download and install Python (if you want to use notebook)
 
 
 ```
