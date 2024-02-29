@@ -1,0 +1,81 @@
+:root {
+  --scale-items: 2vmin;
+  --title-bar-height: 1rem;
+  --one-widget-width: 250px;
+}
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  overflow: auto;
+  background: transparent;
+
+}
+
+.bg-radial {
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(15, 15, 50, 0.5),
+      rgba(0, 10, 50, 0.25) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(15, 15, 50, 0.5),
+      rgba(0, 10, 50, 0.25) 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        rgba(15, 15, 50, 0.5),
+        rgba(0, 10, 50, 0.5) 70.71%
+      ) rgba(0, 0, 0, 0.6);
+}
+
+title {
+  background: transparent;
+}
+
+
+
+
+.App {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+
+  background-color: transparent;
+  background: transparent;
+
+  z-index: 1000;
+}
+
+
+
+
+
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */

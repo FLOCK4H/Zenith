@@ -1,0 +1,28 @@
+/* ShadowView.css */
+
+.view {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 21;
+    top: 50%; /* Position the top edge of the element in the middle of the screen */
+    left: 50%; /* Position the left edge of the element in the middle of the screen */
+    transform: translate(-50%, -50%); /* Move the element back by half its own width and height to center it */
+    display: flex; /* Use flexbox for centering content inside .view */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+.flex {
+    display: flex;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bg-blackA {
+    background: rgba(0,0,0,0.5);
+}
+

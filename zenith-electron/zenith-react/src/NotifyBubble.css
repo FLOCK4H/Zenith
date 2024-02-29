@@ -1,0 +1,62 @@
+.notify-bubble {
+    position: fixed;
+    top: 1%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 100100;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.2rem;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: slideDown 1s ease-out forwards;
+    overflow: visible;
+}
+
+.notify-bubble img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 0.8rem;
+    z-index: 100100;
+}
+
+.notify-bubble p {
+    -webkit-text-stroke: 1px white;
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
+    z-index: 100100;
+  }
+
+.bg-bubble {
+    background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(15, 80, 150, 0.3),
+      rgba(0, 50, 50, 0.1) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(0, 80, 100, 0.3),
+      rgba(0, 100, 100, 0.1) 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        rgba(0, 110, 180, 0.3),
+        rgba(0, 80, 100, 0.1) 70.71%
+      ) rgba(0,0,20,0.5);
+
+  }
+
+.round-n-size {
+    border-radius: 1rem;
+    width: auto;
+    min-width: 10rem;
+    height: 2.5rem;
+    padding: 0.3rem;
+}
+
+@keyframes slideDown {
+    0% { top: 0; }
+    100% { top: 3.5rem; }
+}

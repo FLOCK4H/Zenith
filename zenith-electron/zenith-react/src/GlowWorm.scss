@@ -1,0 +1,43 @@
+.parent {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    pointer-events: auto; 
+    z-index: 2;
+    top: 85vh;
+    left: 50%;
+  }
+  
+  .circle {
+    --size: 6px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: rgba(0,125,255,100);
+
+
+    // box-shadow: 0 0 6px 2px rgba(63, 150, 255, 0.6), inset 0 0 8px 0 rgba(63, 150, 255, 0.6);
+
+    position: absolute;
+  
+    @media screen and (max-width: 580px) {
+      --size: 4px;
+    }
+  
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        --i: #{$i};
+        left: calc(var(--i) * 3px); // Consistent separation
+        animation: wiggle calc(3s + var(--i) * 0.1s) ease-in-out infinite alternate;
+      }
+    }
+  }
+  
+  @keyframes wiggle {
+    0%, 100% {
+      transform: translateY(-1px); // Slight vertical movement
+    }
+    50% {
+      transform: translateY(1px);
+    }
+  }

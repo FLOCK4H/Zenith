@@ -1,0 +1,98 @@
+/* ChatBar CSS */
+
+.m-t {
+    position: fixed;
+    height: calc(100% - 1rem);
+    width: 50px;
+    background: rgba(100,140,170,0.1);
+    left: 0;
+    top: 1rem;
+    bottom: 0;
+    border-radius: 10px;
+    transition: all 1s ease;
+    z-index: 1000;
+}
+
+.m-t.expand {
+    width: 150px;
+}
+
+/* higher part container  */
+.hpc {
+    top: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 100%;
+}
+
+.menu-button-container-mai {
+    display: flex;
+    height: 50%;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* lower part container  */
+.lpc {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+
+.username.show {
+    display: flex;
+  }
+
+  .profile-bg {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    border-radius: 8px;
+    display: flex;
+    border: none;
+    align-items: center;
+    background-color: transparent;
+    justify-content: center;
+    padding: 2px;
+    margin-bottom: 5px;
+    gap: 5px;
+    cursor: pointer;
+    user-select: none;
+
+  }
+
+
+  .profile-bg.flex-start-gray {
+    justify-content: flex-start;  
+    background: linear-gradient(0deg, rgba(70,70,70,0.2), rgba(70,70,80,0.4));
+  }
+
+  .profile-pic {
+    background: transparent;
+    width: calc(32px + 0.2vmin);
+    height: calc(34px + 0.2vmin);
+    padding: 2px;
+  }
+  
+  .profile-pic img {
+    height: 32px;
+    width: 32px;
+    padding: 2px;
+  }
+
+ .username {
+  font-size: 0.9rem;
+  color: white;
+  mix-blend-mode: color;
+  overflow: hidden;
+  display: none;
+ }

@@ -1,0 +1,30 @@
+.bg-container {
+    width: 50%;
+    height: 50%;
+    background: transparent;
+    box-shadow: 0 0 200px 0 rgba(0,100,100,1), inset 0 400px 2500px 0 rgba(0,75,75,0.6);
+    position: absolute;
+    right: 50%;
+    top: 0%;
+    z-index: 1;
+    transform: scale(1.1);
+    border-radius: 256px;
+    overflow: hidden;
+    animation: downMove 5s ease forwards;
+}
+
+.bg-container:last-child {
+    animation: upMove 5s ease forwards;
+}
+
+@keyframes downMove {
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes upMove {
+    100% {
+        top: 0;
+    }
+}

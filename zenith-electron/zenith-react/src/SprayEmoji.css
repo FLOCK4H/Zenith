@@ -1,0 +1,33 @@
+/* SprayEmoji.css */
+.spray-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+
+}
+
+
+
+.emoji {
+    position: absolute;
+    bottom: 0;
+    animation: shoot-up 3s linear forwards;
+    color: white;
+    mix-blend-mode: difference;
+  }
+  
+  @keyframes shoot-up {
+    0% { 
+      transform: translateX(var(--startPosX)) translateY(0); 
+      opacity: 1; 
+    }
+    100% { 
+      transform: translateX(var(--endPosX)) translateY(-500px); 
+      opacity: 0; 
+    }
+  }

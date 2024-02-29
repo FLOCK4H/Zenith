@@ -1,0 +1,19 @@
+/* FeatureBox.css */
+
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 22rem;
+    min-height: 13rem;
+    background-color: transparent;
+    gap: 1rem;
+    transition: all 1s ease;
+}
+
+@media (max-width: 900px) {
+    .feature-container {
+        width: 18rem;
+    }
+}

@@ -1,0 +1,22 @@
+.widget-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 2px;
+    width: 98%;
+    left: 2%;
+    padding: 0;
+    background: transparent;
+    box-shadow: inset 0 0 50px 0 rgba(0,200,255, 0.2), 0 -1rem 50px 1px rgba(0,155,200,1.0);
+    overflow: hidden;
+
+  }
+
+
+
+.bg-trans {
+    background: transparent;
+}

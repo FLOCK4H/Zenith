@@ -1,0 +1,161 @@
+// UtilBar.scss
+:root {
+    --one-width: 20rem;
+}
+
+.util-bar {
+    position: fixed;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: var(--one-width);
+    height: 128px;
+
+      
+    .circle {
+      background-color: transparent;
+      width: 127px;
+      height: 127px;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%) translateY(50%);
+      box-shadow: inset 0 0 20px 0 rgba(0, 40, 140, 0.9), 
+      inset 0 0 10px 0 rgba(0, 7, 40, 0.7),
+      0 4px 10px rgba(0, 7, 40, 0.5);
+      animation: stayStill 100s ease-in-out infinite;
+      will-change: transform; // Optimize for transform changes
+    }
+  
+    &:hover {
+      .left-circle {
+        animation: moveLeftCircle 0.5s forwards; // Apply the animation on hover
+
+      }
+      .right-circle {
+        animation: moveRightCircle 0.5s forwards; // Apply the animation on hover
+
+      }
+    }
+  }
+  
+  @keyframes stayStill {
+    0% {
+        transform: translateX(-50%) translateY(50%) scale(1);
+        }
+    50% {
+        transform: translateX(-50%) translateY(50%) scale(1.1);
+        }
+    
+    100% {
+        transform: translateX(-50%) translateY(50%) scale(1);
+        }
+  }
+  
+  @keyframes moveLeftCircle {
+    0% {
+      transform: translateX(-50%) translateY(50%);
+    }
+    40%, 60% {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      transform: translateX(calc(-50% - 70px)) translateY(-50px) rotate3d(0, 1, 0, 70deg); // 50% squeeze
+    }
+    50% {
+      transform: translateX(calc(-50% - 70px)) translateY(-50px);
+      
+    }
+    90% {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+    100% {
+      transform: translateX(calc(-50%)) translateY(-80px) rotate3d(0, 1, 0, 0deg);
+      width: var(--one-width);
+      height: 80px;
+      border-radius: 4rem;
+      box-shadow: inset 0 0 500px 0 rgba(0,06,30,0.9);
+    }
+  }
+  
+  @keyframes moveRightCircle {
+    0% {
+      transform: translateX(-50%) translateY(50%);
+    }
+    40%, 60% {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      transform: translateX(calc(-50% + 70px)) translateY(-50px) rotate3d(0,1,0, 70deg); // 50% squeeze
+    }
+    50% {
+      transform: translateX(calc(-50% + 70px)) translateY(-50px);
+    }
+    90% {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+    100% {
+      transform: translateX(calc(-50%)) translateY(-80px) rotate3d(0,1,0, 0deg); // Return to normal
+      width: var(--one-width);
+      height: 80px;
+      border-radius: 4rem;
+      box-shadow: inset 0 0 500px 0 rgba(0,06,30,0.9);
+    }
+  }
+  .returnLeftCircle, .returnRightCircle {
+    animation: returnCircle 2s forwards;
+  }
+ // Animation when hovered
+ .move {
+    animation: 0.5s forwards;
+}
+
+.left-circle.move {
+    animation-name: moveLeftCircle;
+}
+
+.right-circle.move {
+    animation-name: moveRightCircle;
+}
+
+.return {
+    animation: returnCircle 0.5s forwards;
+}
+ 
+// Keyframes for returning the circles
+@keyframes returnCircle {
+    0% {
+        transform: translateX(calc(-50%)) translateY(-80px);
+        width: var(--one-width);
+        height: 80px;
+        border-radius: 25px;
+        box-shadow: inset 0 0 500px 0 rgba(0,06,30,0.9);
+    }
+    40%, 60% {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        transform: translateX(calc(-50% + 70px)) translateY(-50px) rotate3d(0,1,0, 70deg); // 50% squeeze
+        box-shadow: inset 0 0 500px 0 rgba(0,0,0,0.6);
+      }
+    90% {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+    100% {
+        transform: translateX(-50%) translateY(50%);
+        width: 127px;
+        height: 127px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 20px 0 rgba(0, 40, 120, 0.9), 
+        inset 0 0 10px 0 rgba(0, 7, 40, 0.7),
+        0 4px 10px rgba(0, 7, 40, 0.5); // Adding external and internal shadows for depth
+    }
+}

@@ -1,0 +1,131 @@
+/* Dashboard CSS */
+
+.dashboard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  flex-grow: 1;
+
+  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dashboard::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba( 5, 25, 45, 0.95 );
+  box-shadow: inset 15rem 400px 2500px 2px rgba( 0, 4, 6, 0.65 );
+  backdrop-filter: blur( 50px );
+  -webkit-backdrop-filter: blur( 50px );
+  border-radius: 12px;
+  border: 1px solid transparent;
+  z-index: -1;
+}
+
+.dashboard::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba( 5, 5, 37, 0.45 );
+  box-shadow: inset 0 0 2500px 0 rgba(0, 0, 0, 0.35 );
+  backdrop-filter: blur( 50px );
+  -webkit-backdrop-filter: blur( 50px );
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid transparent;
+  z-index: 1; 
+}
+
+.blend-text {
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.bg-gloss {
+  background: rgba( 20, 50, 70, 0.1 );
+}
+
+.bg-radial {
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(15, 15, 50, 0.1),
+      rgba(0, 10, 50, 0.1) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(15, 15, 50, 0.1),
+      rgba(0, 10, 50, 0.1) 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        rgba(15, 15, 50, 0.1),
+        rgba(0, 10, 50, 0.1) 70.71%
+      ) rgba(0, 0, 0, 0.1);
+}
+
+.bg-linear {
+  background: linear-gradient(
+    217deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 255, 0, 0) 70.71%
+  ), linear-gradient(127deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 70.71%),
+  linear-gradient(336deg, rgba(0, 50, 125, 0.3), rgba(0, 125, 255, 0) 70.71%);
+}
+
+.f-3r {
+  font-size: 3rem;
+}
+
+.f-1r {
+  font-size: 1rem;
+}
+
+  
+.f-08r {
+  font-size: 0.8rem;
+}
+
+.f-09r {
+  font-size: 0.8rem;
+}
+
+
+.f-2r {
+  font-size: 2rem;
+}
+
+.dashboard-animate-out {
+  animation: slideOut 0.5s ease-in-out forwards;
+}
+
+.dashboard-animate-in {
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(+100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

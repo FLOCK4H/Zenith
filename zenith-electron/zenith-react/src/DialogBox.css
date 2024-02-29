@@ -1,0 +1,30 @@
+/* DialogBox.css */
+.dialog-box {
+  width: 80px;
+  height: 200px; 
+  position: fixed;
+  background-color: #fff;
+  border: 1px solid #000;
+
+}
+
+.lb-50 {
+  left: 50%;
+  bottom: 100%;
+}
+
+.trans-50 {
+  transform: translate(-50%, 0);
+}
+
+.above {
+  z-index: 2000;
+}
+
+.dialog-box button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}

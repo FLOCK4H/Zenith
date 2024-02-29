@@ -1,0 +1,237 @@
+.profile-section {
+    position: fixed;
+    top: var(--title-bar-height);
+    left: 0;
+
+  
+    height: calc(100% - var(--title-bar-height));
+    width: 50px;
+
+    z-index: 1000;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .profile-section::before {
+    content: '';
+    position: absolute;
+
+
+
+    right: 0;
+    left: 0;
+    background-color: rgba( 20, 50, 70, 0.1 );
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+    z-index: 999;
+  }
+
+  .menu-items {
+    height: 75%;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    top: 1.15rem;
+  }
+
+  .menu-button-container {
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 42px;
+    border-radius: 20px;
+    width: 90%;
+    cursor: pointer;
+    color: white;
+    mix-blend-mode: color;
+    gap: 0;
+    transition: all 0.5s ease;    
+  }
+
+  .user-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 25%;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    background-color: transparent;
+  }
+
+  .user-button-container {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    bottom: 40px;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .profile-section:hover {
+    background: rgba( 20, 50, 70, 0.1 );
+  }
+  
+
+
+  .user-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+    border-radius: 20px;
+    width: 90%;
+    cursor: pointer;
+    color: white;
+    mix-blend-mode: color;
+    gap: 0;
+    transition: all 1s ease;
+  }
+
+
+
+  .user-button.gap5 {
+    gap: 5px;
+  }
+
+  .menu-button.gap5 {
+    gap: 5px;
+  }
+
+  .icon-container-user-button.width-mod {
+    width: 70%;
+  }
+
+  .icon-container-menu-button.width-mod {
+    width: 70%;
+  }
+
+  .user-button-text {
+    color: white;
+    width: 100%;
+    max-height: 2rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2px;
+    flex-grow: 1;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .user-button-text.show {
+    display: contents;
+  }
+  
+  .icon-container-user-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+    background: transparent;
+
+  }
+
+  .user-button img {
+    height: 32px;
+    width: 32px;
+    transition: all 0.3s ease;
+  }
+
+  .icon.icon-small {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .icon.icon-large {
+    width: 32px;
+    height: 32px;
+  }
+
+  .user-button:hover {
+    background: rgba(100,100,100,0.15);
+  }
+
+  .menu-button:hover {
+    background: rgba(100,100,100,0.15);
+  }
+
+  .profile-section.expanded {
+    width: 150px;
+  }
+
+  .username.show {
+    display: flex;
+  }
+
+  .profile-bg {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    border-radius: 8px;
+    display: flex;
+    border: none;
+    align-items: center;
+    background-color: transparent;
+    justify-content: center;
+    padding: 2px;
+    margin-bottom: 5px;
+    gap: 5px;
+    cursor: pointer;
+    user-select: none;
+
+  }
+
+
+  .profile-bg.flex-start-gray {
+    justify-content: flex-start;  
+    background: linear-gradient(0deg, rgba(0,30,60,0.2), rgba(25,50,70,0.4));
+  }
+
+  .profile-pic {
+    background: transparent;
+    width: calc(32px + 0.2vmin);
+    height: calc(34px + 0.2vmin);
+    padding: 2px;
+  }
+  
+  .profile-pic img {
+    height: 32px;
+    width: 32px;
+    padding: 2px;
+  }
+
+ .username {
+  font-size: 0.9rem;
+  color: white;
+  mix-blend-mode: color;
+  overflow: hidden;
+  display: none;
+ }
