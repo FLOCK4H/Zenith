@@ -1,4 +1,4 @@
-# Zenith - AI Chat UI written in Electron and React.js
+# Zenith - AI Chat written in Electron and React.js
 
 Zenith has no backend yet!
 
@@ -17,3 +17,7 @@ Python (if you want to use notebook)
   $ npm install
   $ npm start
 ```
+
+Wait for release please!
+
+![hi](https://github.com/FLOCK4H/Zenith/assets/161654571/9b676c3d-53ac-44a1-8444-95a1cfa5716c)
