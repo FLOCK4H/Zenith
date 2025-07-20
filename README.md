@@ -1,6 +1,9 @@
-# Zenith - AI Chat written in Electron and React.js
+# [SHOWCASE] Zenith - AI Chat written in Electron and React.js
 
-Zenith has no backend yet!
+> [!IMPORTANT]
+> Due to a lack of external interest in the software, this project hasn't been updated in a long time. It now serves as a showcase of my experience.
+
+Zenith has no backend
 
 # Setup
 Download and install Python (if you want to use notebook)
